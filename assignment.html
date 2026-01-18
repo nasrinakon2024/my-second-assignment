@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        body{
+            margin: 0%;
+            font-family: Inter;
+            color: white;
+        }
+
+        .navber{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1A0B2E;
+            padding: 20px 80px;
+        }
+
+        .logo{
+            font-size: 25px;
+            font-weight: 800;
+            color: white;
+        }
+        .logo span{
+            background: linear-gradient(90deg, #C42DF0, #FF3B8E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .nav-links{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links:hover {
+            color: red;
+            opacity: 1;
+        }
+
+        .subscribe-btn{
+            background: linear-gradient(90deg, #FFD131, #FF3B8E, #C42DF0);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 16;
+            transition: transform 0.3s ease, filter 0.3s, box-shadow 0.3s;
+        }
+
+        .arrow{
+            font-size: 16;
+            font-weight: 600;
+        }
+        .subscribe-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            filter: brightness(1.1);
+            box-shadow: 0 5px 10px rgb(196, 45, 240, 0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <Nav class="navber">
+        <div class="logo">Tech <span>Wave</span></div>
+        <ul class="nav-links">
+            <li>About</li>
+            <li>Episodes</li>
+            <li>Host</li>
+        </ul>
+        <button class="subscribe-btn">Subscribe <span class="arrow">→</span> </button>
+    </Nav>
+</body>
+</html>
