@@ -49,7 +49,7 @@
         }
 
         .nav-links:hover {
-            color: red;
+            color: rgb(231, 122, 141);
             opacity: 1;
         }
 
@@ -74,17 +74,245 @@
             box-shadow: 0 5px 10px rgb(196, 45, 240, 0.4);
         }
 
+        .hero-section {
+            position: relative;
+            background-color: #1A0B2E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            
+        }
+/*wav animation*/
+
+ @keyframes waveMotion {
+    0%, 100%{
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50%{
+        transform: translate(-48%, -52%) scale(1.05);
+    }
+ }   
+
+        .wav-bg{
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            opacity: 0.5;
+            pointer-events: none;
+            animation: waveMotion 10s ease-in-out infinite;
+        }
+
+        .hero-content{
+            position: relative;
+            z-index: 2;
+        }
+
+        .circle-img{
+            width: 100%;
+            z-index: 2;
+        }
+
+        
+        .mic-container{
+            position: relative;
+            width: 350px;
+            height: 350px;
+            margin:0 auto 30px;
+           
+        }
+ 
+
+        .mic-img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            animation: micFloat 4s ease-in-out infinite;
+        }
+
+       
+        .badge-new{
+            position: absolute;
+            top: 20px;
+            right: 5px;
+            background-color: rgb(97, 205, 97);
+            color: black;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 18px;
+            z-index: 4;
+        }
+
+        .badge-new:hover{
+            background-color: #FF3B8E;
+        }
+
+        .hero-title{
+            font-weight: 800;
+            font-size: clamp (40px, 8vw, 64px);
+            margin-bottom: 10px;
+        }
+
+        .hero-description{
+            font-size: 14px;
+            color: #FFFFFF;
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        .hero-action{
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn-spotify{
+            background: linear-gradient(90deg, #FF3B8E, #C42DF0);
+            padding: 12px 20px;
+            border-radius: 30px;
+            color: #FFFFFF;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 300;
+        }
+
+        .btn-subscribe{
+            border: 1px solid #00FF85;
+            color: #00FF85;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 300px;
+        }
+
+        .about-section{
+            padding: 100px 20px;
+            text-align: center;
+            background: #1A0B2E;
+        }
+
+        .section-title{
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .stats-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-card{
+            border: 1px solid #FF3B8E;
+            padding: 40px 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-card h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #00FF85;
+        }
+        .stat-card p{
+            font-size: 12px;
+            opacity: 0.6;
+            letter-spacing: 1px;
+        }
+        .section-description{
+            max-width: 800px;
+            margin:0 auto 15px;
+            color: white;
+            line-height: 1.6;
+            font-size: 17px;
+            text-align: center;
+            padding-bottom: 0;
+        }
+
+       
     </style>
 </head>
 <body>
-    <Nav class="navber">
+    <nav class="navber">
         <div class="logo">Tech <span>Wave</span></div>
-        <ul class="nav-links">
+
+        <div class="menu" id="mobile-menu">
+           
+           <span></span>
+           <span></span>
+           <span></span>
+          
+        </div>
+        <ul class="nav-links" id="nav-list">
             <li>About</li>
             <li>Episodes</li>
             <li>Host</li>
         </ul>
         <button class="subscribe-btn">Subscribe <span class="arrow">→</span> </button>
-    </Nav>
+    </nav>
+
+    <section class="hero-section">
+        <img class="wav-bg" src="Images/hero-bg.png" alt="Wave Background">
+        <div class="hero-content">
+            <div class="mic-container">
+                <img class="circle-img" src="Images/hero-circle.png" alt="">
+
+                <img class="mic-img" src="Images/microphone.png" alt="">
+
+                <span class="badge-new">NEW</span>
+
+            </div>
+            <h1 class="hero-title">TechWave</h1>
+            <p class="hero-description">Your daily does of tech insights, produtivity hacks, and personal growth</p>
+
+            <div class="hero-action">
+                <a href="#"  class="btn-spotify"> 
+                <img src="Images/spotify.png" alt="Listen on spotify">
+                <i class="btn">Listen On Spotify</i>
+                </a>
+
+                <a href="#" class="btn-subscribe">
+                    <img src="Images/message.png" alt="Subscribe">
+                    <i class="btn">Subscribe</i>
+                </a>
+            </div>
+        </div>
+    </section>
+   <section class="about-section">
+        <h2 class="section-title">About The Podcast</h2>
+        <p class="section-description">TechWave is your go-to podcast for staying ahead in the fast-paced world of technology. We break down complex topics into digestible insights, explore produtivity strategies that actually work, and share stories of personal growth from industry leaders.</p>
+        <p>Join thousands of young professionals and tech enthusiasts who start their day with TechWave.</p>
+        <div class="stats-container" >
+        <div class="stat-card">
+            <h3>150k+</h3>
+            <p>MONTHLY LISTENERS</p>
+        </div>
+        <div class="stat-card">
+            <h3>200+</h3>
+            <p>EPISODES PUBLISHED</p>
+        </div>
+        <div class="stat-card">
+            <h3>4.9★</h3>
+            <p>AVERAGE RATING</p>
+        </div>
+        <div class="stat-card">
+            <h3>50+</h3>
+            <p>INDUSTRY EXPERTS</p>
+        </div>
+    </div>
+   </section> 
 </body>
 </html>
