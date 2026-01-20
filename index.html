@@ -75,28 +75,22 @@
         }
 
         .hero-section {
+            padding-top: 150px;
             position: relative;
             background-color: #1A0B2E;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
             overflow: hidden;
             
         }
-/*wav animation*/
-
- @keyframes waveMotion {
-    0%, 100%{
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50%{
-        transform: translate(-48%, -52%) scale(1.05);
-    }
- }   
+ 
 
         .wav-bg{
             position: absolute;
+            margin-top: 50px;
             width: 100%;
             top: 50%;
             left: 50%;
@@ -242,7 +236,78 @@
             padding-bottom: 0;
         }
 
-       
+        .section-title{
+            font-size: 36px;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+/*section background*/
+
+     .features-section{
+        background-color: #1A0B2E;
+        padding: 80px 0;
+        color: #FFFFFF;
+     }
+/*three column grid setup*/
+
+     .features-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+     }
+
+/*common card design*/
+
+     .feature-card{
+        background: #1B0B2E;
+        border: 2px solid #331C52;
+        border-radius: 16px;
+        padding: 30px;
+        text-align: left;
+     }
+
+     .feature-card: :nth-child(1) {
+        grid-row: span 2;
+     }
+
+     .feature-card .exclusive{
+        grid-column: span 2;
+     }
+
+     .feature-card .horizontal{
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+     }
+
+/*image icon size*/
+
+     .feature-card img{
+        width: 48px;
+        height: auto;
+        margin-bottom: 20px;
+     }
+
+     .feature-card .horizontal img{
+        margin-bottom: 0;
+     }
+/*text style*/
+
+     .feature-card h3{
+        font-size: 20px;
+        margin-bottom: 12px;
+     }
+     .feature-card p {
+        font-size: 14px;
+        color: #A696BA;
+        line-height: 1.6;
+     }
     </style>
 </head>
 <body>
@@ -314,5 +379,44 @@
         </div>
     </div>
    </section> 
+
+   <section class="features-section">
+    <div class="container">
+        <h2 class="section-title">Why Choose TechWave</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="Images/headphone.png" alt="Audio">
+                <h3>Premium Audio Quality</h3>
+                <p>Experience crystal-clear sound with professional-grade recording equipment and expert audio engineering.</p>
+            </div>
+            <div class="feature-card horizontal">
+                <img src="Images/device.png" alt="Mobile">
+                <div class="text-content">
+                    <h3>Mobile Friendly</h3>
+                    <p>Listen on the go with seamless mobile experience and offline downloads.</p>
+                </div>
+            </div>
+            <div class="feature-card horizontal">
+                <img src="Images/location.png" alt="Global">
+                <div class="text">
+                    <h3>Global Community</h3>
+                    <p>Connect with Tech enthusiasts from over 120 countries worldwide.</p>
+                </div>
+            </div>
+            <div class="feature-card exclusive">
+                <img  src="" alt="Interview">
+                <h3>Exclusive Interviews</h3>
+                <p>Get unprecedented access to industry titans, startup founders, and tech visionaries. Our host secures exclusive conversasions you won't find anywhere else.</p>
+            </div>
+
+            <div class="feature-card">
+                <img  src="Images/resource.png" alt="Resource">
+                <h3>Rich Reasources</h3>
+                <p>Access show notes, transcript and additional learning materials for every episode.</p>
+            </div>
+        </div>
+    </div>
+   </section>
 </body>
 </html>
