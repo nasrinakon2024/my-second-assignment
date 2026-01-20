@@ -148,12 +148,19 @@
             background-color: #FF3B8E;
         }
 
+            .btn:hover{
+                font-weight: 700;
+                color: black
+            }
         .hero-title{
             font-weight: 800;
             font-size: clamp (40px, 8vw, 64px);
             margin-bottom: 10px;
         }
 
+        .hero-title:hover{
+            color: #00FF94;
+        }
         .hero-description{
             font-size: 14px;
             color: #FFFFFF;
@@ -161,6 +168,9 @@
             margin: 0 auto 20px;
         }
 
+            .hero-description:hover{
+                color: springgreen
+            }
         .hero-action{
             display: flex;
             gap: 15px;
@@ -202,6 +212,9 @@
             margin-bottom: 20px;
         }
 
+        .section-title:hover{
+            color: #00FF85;
+        }
         .stats-container{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -244,6 +257,10 @@
             margin-top: 20px;
             margin-bottom: 40px;
             letter-spacing: 1px;
+        }
+
+        .section-title:hover{
+            color: #00FF85;
         }
 /*section background*/
 
@@ -325,6 +342,13 @@
         letter-spacing: 1px;
      }
 
+     .episodes-title:hover{
+        color: #00FF85;
+     }
+
+     .host-title:hover{
+        color: #00FF85;
+     }
     .host-text{
         font-size: 24px;
         margin-bottom: 15px;
@@ -458,6 +482,81 @@
         align-items: center;
         transition: 0.3s;
         text-decoration: none;
+     }
+
+     .footer-section{
+        background-color: #1A0B2E;
+        padding: 120px 0 60px;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+     }
+
+     .footer-bg-img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        opacity: 0.4;
+        z-index: 1;
+        pointer-events: none;
+     }
+
+     .footer-container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+     }
+
+     .footer-logo{
+        font-size: 60px;
+        font-weight: 800;
+        margin-bottom: 40px;
+        letter-spacing: -2px;
+     }
+
+     .footer-logo span{
+        background: linear-gradient(to right, #FF3B8E, #C42DF0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+     }
+
+     .footer-platforms{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+     }
+
+     .platform-link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 10px;
+        color: #A696BA;
+        font-size: 16px;
+        transition: 0.3s;
+     }
+
+     .platform-link img{
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+     }
+
+     .platform-link:hover{
+        color: #FFFFFF;
+     }
+
+     .copyright{
+        font-size: 14px;
+        color: #665678;
+        margin-top: 20px;
      }
     </style>
 </head>
@@ -637,5 +736,21 @@
         </div>
     </div>
    </section>
+
+   <footer class="footer-section">
+    <img class="footer-bg-img" src="Images/footer-bg.png" alt="">
+        <div class="footer-container">
+           <h1 class="footer-logo">Tech<span>Wave</span></h1>
+
+           <div class="footer-platforms">
+            <a href="#" class="platform-link"><img src="Images/spotify.png" alt="">Spotify</a>
+            <a href="#"class="platform-link"><img src="Images/apple-podcast.png" alt="">Apple Podcasts</a>
+            <a href="#" class="platform-link"><img src="Images/youtube-podcast.png" alt="">YouTube</a>
+            <a href="#" class="platform-link"><img src="Images/twitter.png" alt="">Twitter</a>
+           </div>
+
+           <p class="copyright">© 2026 TechWave Poadcast. All rights reserved.</p>
+        </div>
+   </footer>
 </body>
 </html>
