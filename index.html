@@ -308,6 +308,96 @@
         color: #A696BA;
         line-height: 1.6;
      }
+
+     .episodes-section{
+        background: #1A0B2E;
+        padding: 80px 0;
+        color: #FFFFFF;
+     }
+
+     .episodes-title{
+        font-size: 32px;
+        font-weight: 700;
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+     }
+/*container and grid settings*/
+     .episodes-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 40px;
+     }
+     .episodes-card{
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        background: #1B0B2E;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #FFFFFF;
+        transition: 0.3s;
+     }
+
+     .video-container{
+        position: relative;
+        width: 100%;
+        height: 180px;
+     }
+
+     .thumbnail{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+     }
+/*play button design*/
+
+     .play-circle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(to right, #C42DF0, #FF3B8E);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+     }
+
+     .episode-infu{
+        padding: 20px;
+     }
+
+     .episode-infu h3{
+        color: #FFFFFF;
+        margin-bottom: 10px;
+        font-size: 18px;
+     }
+
+     .episode-infu p{
+        color: #A696BA;
+        font-size: 14px;
+        line-height: 1.5;
+     }
+
+     .duration{
+        color: #00FF94;
+        font-size: 12px;
+        margin-top: 15px;
+        display: block;
+     }
+
+     .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+     }
     </style>
 </head>
 <body>
@@ -415,6 +505,58 @@
                 <h3>Rich Reasources</h3>
                 <p>Access show notes, transcript and additional learning materials for every episode.</p>
             </div>
+        </div>
+    </div>
+   </section>
+
+   <section class="episodes-section">
+    <div class="container">
+        <h2 class="episodes-title">Featured Episodes</h2>
+
+        <div class="episodes-grid">
+           <a class="episodes-card" href="https://youtu.be/D1eL1EnxXXQ?si=CvtpWx2HTdCWnOWM" target="_blank"> 
+            <div class="video-container">
+                <img class="thumbnail" src="Images/ai.jpg" alt="Ai Video">
+                <div class="play-overlay">
+                    <div class="play-circle">▶</div>
+                </div>
+            </div>
+            <div class="episode-infu">
+                <h3>The Future of AI in Everyday Life</h3>
+                <p>Exploring how artificial intelligence is transforming our daily routines.</p>
+                <span class="duration">🟢 42 min</span>
+            </div>
+           </a>
+
+           <a  class="episodes-card" href="https://youtu.be/Xfw0ufuYs2Q?si=WuCL5ie3XIHMOTJu" target="_blank">
+            <div class="video-container">
+                <img class="thumbnail" src="Images/remote.jpg" alt="Remote Work">
+                <div class="play-overlay">
+                     <div class="play-circle">▶</div>
+                </div>
+            </div>
+            <div class="episode-infu">
+                <h3>Building Better Habits for Remote Work</h3>
+                <p>Practical strategies for staying productive in a remote environment.</p>
+                 <span class="duration">🟢 35 min</span>
+            </div>
+           </a>
+
+           <a class="episodes-card" href="https://youtu.be/NX6qIbflNyY?si=OJFJ5k9HfWuXT8VL" target="_blank">
+            <div class="video-container">
+                <img class="thumbnail" src="Images/career.jpg" alt="Career Growth">
+                <div class="play-overlay">
+                 <div class="play-circle">▶</div>
+                 </div>
+            </div>
+
+            <div class="episode-infu">
+                <h3>Career Growth in Tech: A Roadmap</h3>
+                <p>Expert advice on navigating you tech career journey.</p>
+                <span class="duration">🟢 51 min</span>
+            </div>
+           </a>
+
         </div>
     </div>
    </section>
